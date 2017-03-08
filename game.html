@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CEE-LO</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src='script.js'></script>
+</head>
+<body>
+<!-- The code below is for the main game screen banner that is constant during play. -->
+	<div id="banner" class=" ">
+		<div id="header" class=" ">CEE LO</div>
+		<div id="sub-header" class=" ">An Ancient Dice Game</div>
+		<div id="nav-bar" class=" ">
+			<nav id="about" class="nav">ABOUT</nav>
+			<nav id="new=player" class="nav">NEW PLAYER</nav>
+			<nav id="add-coin" class="nav">ADD COIN</nav>
+		</div>
+	</div>
+
+<!-- The code below is the Home screen that will load initially. It is a modal window in which the game is explained and the rules are explained. It is also where the nav element "About" will navigate to. -->
+	<div id="opening-welcome" class="modal-overlay">
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>Cee Lo</h1>
+					<h2>"It's as Easy as 4-5-6!"</h2>
+				</div>
+				<div class="modal-body">
+					<h1>About Ceelo:</h1>
+					<p>lorem ipsum loraem ipsum</p>
+					</br>
+					<h1>Rules of Cee Lo</h1>
+					<ol>
+						<li>lorem</li>
+						<li>ipsum</li>
+						<li>lorem lorem</li>
+						<li>ipsum lorem</li>
+					</ol>
+				</div>
+				<div class="modal-footer">
+					<h2>Ready to Play?</h2>
+					<div id="button-container">
+						<button id="play-button" class=" ">YES</button>
+						<button id="learn-more" class=" ">LEARN MORE</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- The code below is the 2nd modal screen where the user enters their name. It is also where the nav element "New Player" will navigate to. -->	
+	<div id="player-modal" class="modal-overlay">
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>Who Is Playing?</h1>
+					<h2>"Please fill in the following information</h2>
+				</div>
+				<div class="modal-body">
+					<h3>Player Name:</h1>
+					<input type="text" value="New Player"/>
+					</br>
+				</div>
+				<div class="modal-footer">
+					<h2>Click "Submit" to continue</h2>
+					<div id="button-container">
+						<button class="home-button">BACK</button>
+						<button class="submit" class=" ">SUBMIT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- The code below is the 3rd modal screen where the user chooses the bank amount before the game begins. It is also where the nav element "Add Coin" will navigate to -->
+	<div id="money-modal" class="modal-overlay">
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>What's Your Buy-in?</h1>
+					<h2>Set your Bank to bet!</h2>
+				</div>
+				<div class="modal-body">
+					<h1>Click up or down to change your amount</h1>
+					<div id="bank-buttons">
+						<button id="bank-down">-</button>
+						<button id="bank-up">+</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<h2>Click "Submit" to continue</h2>
+					<div id="button-container">
+						<button class="home-button">BACK</button>
+						<button class="submit">SUBMIT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
