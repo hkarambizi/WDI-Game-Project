@@ -190,7 +190,9 @@ var rollsArray = [Player.dice1Val, Player.dice2Val, Player.dice3Val];
 		console.log(Player.dice3Val);
 	});
 
-
+	$('#about').click(function(){
+		$('div.modal').modal('show');
+	});
 
 
 

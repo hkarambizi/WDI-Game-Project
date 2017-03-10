@@ -12,20 +12,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', end
 }
 
 h1 {
-	font-family: 'Press Start 2P';
+	font-family: 'Press Start 2P', cursive;
 	color: #33FF49 ;
 
 }
 
 
 h2 {
-	font-family: 'Press Start 2P';
+	font-family: 'Press Start 2P', cursive;
+	color: #33FF49 ;
 	font-size: 16px;
 }
+
+a {
+	font-family: 'Press Start 2P', cursive;
+	color: #33FF49 ;
+	font-size: 16px;
+}
+
+li {
+	font-family: 'Press Start 2P', cursive;
+	color: #33FF49 ;
+	font-size: 16px;
+}
+.btn-danger {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	font-size: 16px;
+}
+
+#flex-box {
+	display: flex;
+}
+
 .nav {
   background: black;
   color: #232524;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-self: center;
 }
+
+
 #header {
 	text-align: center;
 }
@@ -33,8 +63,9 @@ h2 {
 #sub-header {
 	text-align: center;
 	}
+
 .container-fluid {
-	background: linear-gradient(45deg, #00E7FF, #00FF9C);
+
 
 
 }

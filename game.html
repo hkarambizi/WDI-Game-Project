@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Shojumaru" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -15,21 +16,22 @@
 <body>
 <!-- The code below is for the main game screen banner that is constant during play. -->
 	
-	<div id="header" class=" "><h1>CEE LO</h1></div>
-		<div id="sub-header" class=" "><h3>An Ancient Dice Game</h3></div>
+	<div id="header" class=" "><h1>Cee Lo</h1></div>
+		<div id="sub-header" class=" "><h2>The Timeless Dice Game</h2>
+		</div>
 		
-		<div class="navbar nav-pills nav-justified">
+		<div class="navbar nav-justified">
 			<div class="container-fluid">
 				<div id="nav-bar" class="navbar-header">
 					<ul class="nav navbar-nav">
-					<li class="active"><a href="#">ABOUT</a></li>
-					<li><a href="#">NEW PLAYER</a></li>
-					<li><a href="#">ADD COIN</a></li>
+					<li id="about" class="active"><a href="#">ABOUT</a></li>
+					<li class="disabled"><a href="#">NEW PLAYER</a></li>
+					<li class="disabled"><a href="#">ADD COIN</a></li>
 					</ul>
 			</div>
 		</div>
 	</div>
-	
+
 <!-- The code below is the Home screen that will load initially. It is a modal window in which the game is explained and the rules are explained. It is also where the nav element "About" will navigate to. -->
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -124,12 +126,9 @@
 		<div id="dice-three" class="side-1">
 		</div>
 	</div>
+<button id="roll-dice" class="btn btn-danger">CLICK TO ROLL</button>
+</div>
 
-</div>
-<div>
-	<button id="roll-dice" class="btn btn-danger">CLICK TO ROLL</button>
-	<button id="computer-dice" class="btn btn-danger">COMPUTER</button>
-</div>
 
 
 

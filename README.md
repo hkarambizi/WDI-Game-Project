@@ -24,16 +24,14 @@ Live site: #####
 Technologies Used
 
 Languages - HTML5, CSS3, Javascript, jQuery
-Design - MockingBird, Google Fonts, SweetAlert
+Design - Google Fonts
 Project Planning & User Stories - Trello
 Sublime Text 3
 Features
 
-SweetAlert, an awesome replacement for JavaScript's alert
-Scoreboard
+
 New Game Button
-Reset Score Button
-Highlights winning squares
+
 Wireframe
 
 Wireframe
