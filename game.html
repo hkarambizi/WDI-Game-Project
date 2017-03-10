@@ -3,6 +3,10 @@
 <head>
 	<title>CEE-LO</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Shojumaru" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -10,50 +14,54 @@
 </head>
 <body>
 <!-- The code below is for the main game screen banner that is constant during play. -->
-	<div id="banner" class=" ">
-		<div id="header" class=" ">CEE LO</div>
-		<div id="sub-header" class=" ">An Ancient Dice Game</div>
-		<div id="nav-bar" class=" ">
-			<nav id="about" class="nav">ABOUT</nav>
-			<nav id="new=player" class="nav">NEW PLAYER</nav>
-			<nav id="add-coin" class="nav">ADD COIN</nav>
-		</div>
-	</div>
-
-<!-- The code below is the Home screen that will load initially. It is a modal window in which the game is explained and the rules are explained. It is also where the nav element "About" will navigate to. -->
-	<div id="opening-welcome" class="modal-overlay">
-		<div class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1>Cee Lo</h1>
-					<h2>"It's as Easy as 4-5-6!"</h2>
-				</div>
-				<div class="modal-body">
-					<h1>About Ceelo:</h1>
-					<p>lorem ipsum loraem ipsum</p>
-					</br>
-					<h1>Rules of Cee Lo</h1>
-					<ol>
-						<li>lorem</li>
-						<li>ipsum</li>
-						<li>lorem lorem</li>
-						<li>ipsum lorem</li>
-					</ol>
-				</div>
-				<div class="modal-footer">
-					<h2>Ready to Play?</h2>
-					<div id="button-container">
-						<button id="play-button" class=" ">YES</button>
-						<button id="learn-more" class=" ">LEARN MORE</button>
-					</div>
-				</div>
+	
+	<div id="header" class=" "><h1>CEE LO</h1></div>
+		<div id="sub-header" class=" "><h3>An Ancient Dice Game</h3></div>
+		
+		<div class="navbar nav-pills nav-justified">
+			<div class="container-fluid">
+				<div id="nav-bar" class="navbar-header">
+					<ul class="nav navbar-nav">
+					<li class="active"><a href="#">ABOUT</a></li>
+					<li><a href="#">NEW PLAYER</a></li>
+					<li><a href="#">ADD COIN</a></li>
+					</ul>
 			</div>
 		</div>
 	</div>
+	
+<!-- The code below is the Home screen that will load initially. It is a modal window in which the game is explained and the rules are explained. It is also where the nav element "About" will navigate to. -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel">Cee Lo</h1>
+        <h2>"It's as Easy as 4-5-6!"</h2>
+      </div>
+      <div class="modal-body">
+	<h3>Game History</h3>
+		<h4>Cee-lo is a gambling game played with three six-sided dice. There is not one standard set of rules, but there are some constants that hold true to all sets of rules. The name comes from the Chinese Sì-Wŭ-Liù (四五六), meaning "four-five-six". In America it is also called "See-Low," "Four-Five-Six," "The Three Dice Game," "Chinchirorin," and by several alternative spellings, as well as simply "Dice."</h4>
+      </div>
+      	<br />
 
-<!-- The code below is the 2nd modal screen where the user enters their name. It is also where the nav element "New Player" will navigate to. -->	
+      <h3>Game Rules</h3>
+		<h4>Each player gets a turn to roll three dice simultaneuosly. The goal is to roll the dice until they achieve either:
+		1. A Single Point roll - Where two dice are matching and the outlying number produces a "single point score". The higher number of these scores wins the round.
+		2. A Triples roll - Where all three dice are matching in which they recieve a "triples score" in which the matching number is their "triples score". Triples scores automatically beat single point scores but when both players have triples, the higher triples score wins the round. 
+		3. A Winning/Losing roll - No matter what roll the other player has, if a player rolls a "1, 2, 3", it is an automatic loss and if a player rolls a "4, 5, 6" it is an automatic win. 
+		At the end of each round, the winner is given a coin from the loser. The human player then has the option to keep playing or "cash out" which will exit the game.</h4>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Ready To Play</button>
+        <button type="button" class="btn btn-default"><a href="https://en.wikipedia.org/wiki/Cee-lo" target="_blank">Learn More</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- The code below is the 2nd modal screen where the user enters their name. It is also where the nav element "New Player" will navigate to. 	
 	<div id="player-modal" class="modal-overlay">
-		<div class="modal">
+		<div class="">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1>Who Is Playing?</h1>
@@ -75,9 +83,9 @@
 		</div>
 	</div>
 
-<!-- The code below is the 3rd modal screen where the user chooses the bank amount before the game begins. It is also where the nav element "Add Coin" will navigate to -->
+ The code below is the 3rd modal screen where the user chooses the bank amount before the game begins. It is also where the nav element "Add Coin" will navigate to 
 	<div id="money-modal" class="modal-overlay">
-		<div class="modal">
+		<div class="">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1>What's Your Buy-in?</h1>
@@ -100,7 +108,47 @@
 			</div>
 		</div>
 	</div>
-	
+
+	-->
+
+<div class="row">
+	<div class="col-md-4 col-xs-12">
+		<div id="dice-one" class="side-1">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-12">
+		<div id="dice-two" class="side-1">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-12">
+		<div id="dice-three" class="side-1">
+		</div>
+	</div>
+
+</div>
+<div>
+	<button id="roll-dice" class="btn btn-danger">CLICK TO ROLL</button>
+	<button id="computer-dice" class="btn btn-danger">COMPUTER</button>
+</div>
+
+
+
+<audio id="cha-ching" preload="cha-ching">
+	<source src="http://soundbible.com/mp3/Cash Register Cha Ching-SoundBible.com-184076484.mp3"></source>
+</audio>
+	<audio id="beep" preload="hover-beep">
+	<source src="http://soundbible.com/mp3/Beep%20Ping-SoundBible.com-217088958.mp3"></source>
+</audio>
+<audio id="dice-roll" preload="dice-roll">
+	<source src="http://soundbible.com/mp3/Shake%20And%20Roll%20Dice-SoundBible.com-591494296.mp3"></source>
+</audio>
+<audio id="laugh" preload="evil-laugh">
+	<source src="http://soundbible.com/mp3/Monster%20Laugh-SoundBible.com-542163030.mp3"></source>
+</audio>
+<audio preload="evil-laugh">
+	<source src="http://soundbible.com/mp3/Monster%20Laugh-SoundBible.com-542163030.mp3"></source>
+</audio>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

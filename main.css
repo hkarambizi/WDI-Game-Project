@@ -1,0 +1,246 @@
+body {
+	height: 100%;
+	display: flex-inline;
+	margin: 0;
+	background: -moz-linear-gradient(0deg, rgba(66,66,66,1) 0%, rgba(66,66,66,1) 1%, rgba(56,56,56,1) 39%, rgba(36,36,36,1) 69%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(66,66,66,1)), color-stop(1%, rgba(66,66,66,1)), color-stop(39%, rgba(56,56,56,1)), color-stop(69%, rgba(36,36,36,1)), color-stop(80%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(0deg, rgba(66,66,66,1) 0%, rgba(66,66,66,1) 1%, rgba(56,56,56,1) 39%, rgba(36,36,36,1) 69%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(0deg, rgba(66,66,66,1) 0%, rgba(66,66,66,1) 1%, rgba(56,56,56,1) 39%, rgba(36,36,36,1) 69%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(0deg, rgba(66,66,66,1) 0%, rgba(66,66,66,1) 1%, rgba(56,56,56,1) 39%, rgba(36,36,36,1) 69%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); /* ie10+ */
+background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(66,66,66,1) 1%, rgba(56,56,56,1) 39%, rgba(36,36,36,1) 69%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#000000',GradientType=1 ); /* ie6-9 */
+}
+
+h1 {
+	font-family: 'Press Start 2P';
+	color: #33FF49 ;
+
+}
+
+
+h2 {
+	font-family: 'Press Start 2P';
+	font-size: 16px;
+}
+.nav {
+  background: black;
+  color: #232524;
+}
+#header {
+	text-align: center;
+}
+
+#sub-header {
+	text-align: center;
+	}
+.container-fluid {
+	background: linear-gradient(45deg, #00E7FF, #00FF9C);
+
+
+}
+
+button {
+	margin: auto 0;
+}
+
+/*.dice-container {
+	width: 100px;
+	height: 100px;
+  	position: relative;
+  	perspective: 1000px;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+	z-index: 999;
+	transition: transform 0.5s ease 0;
+	&:hover {
+		transform: scale(0.98);
+	}
+}
+
+#dice-one {
+  	width: 10%;
+  	height: 10%;
+  	position: relative;
+  	transform-style: preserve-3d;
+	transition: transform .35s;
+	figure {
+		width: 198px;
+		height: 198px;
+		display: block;
+		position: absolute;
+		border: 1px solid #000;
+		box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+		border-radius: 30px;
+		text-align: center;
+		line-height: 200px;
+		font-size: 60px;
+		background-color: #FFF;
+	
+	}
+}
+
+#dice-two {
+  	width: 10%;
+  	height: 10%;
+  	position: relative;
+  	transform-style: preserve-3d;
+	transition: transform .35s;	
+    figure {
+		width: 198px;
+		height: 198px;
+		display: block;
+		position: absolute;
+		border: 1px solid #000;
+		box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+		border-radius: 30px;
+		text-align: center;
+		line-height: 200px;
+		font-size: 60px;
+		background-color: #FFF;
+	
+	}
+}
+
+#dice-three {
+  	width: 10%;
+  	height: 10%;
+  	position: relative;
+  	transform-style: preserve-3d;
+	transition: transform .35s;
+	figure {
+		width: 198px;
+		height: 198px;
+		display: block;
+		position: absolute;
+		border: 1px solid #000;
+		box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+		border-radius: 30px;
+		text-align: center;
+		line-height: 200px;
+		font-size: 60px;
+		background-color: #FFF;
+		.unselectable;
+	}
+}
+
+
+
+/*DICE ONE*/
+
+
+.side-1  { 
+	height: 200px;
+	width: 200px;
+	background-image: url('https://image.ibb.co/bBmyLa/one_dice_side.png');
+	border-radius: 20px;
+}
+.side-2   { 
+	height: 200px;
+	width: 200px;
+	background-image: url('https://image.ibb.co/inNG6F/two_dice_side.png');
+	border-radius: 20px;
+}
+.side-3  { 
+	height: 200px;
+	width: 200px;
+	background-image: url('https://image.ibb.co/caSSDv/three_dice_side.png');
+	border-radius: 20px;
+}
+.side-4   { 
+	height: 200px;
+	width: 200px;
+	background-image: url('https://image.ibb.co/mZDOmF/four_dice_side.png');
+	border-radius: 20px;
+}
+.side-5   { 
+	height: 200px;
+	width: 200px;
+	background-image: url('https://image.ibb.co/jcWXfa/five_dice_side.png');
+	border-radius: 20px;
+}
+.side-6 { 
+	height: 200px;
+	width: 200px;
+	background-image: url('https://image.ibb.co/hiLfYv/six_dice_side.png');
+	border-radius: 20px;
+}
+
+
+/*
+
+#dice-two.show-front  { 
+	transform: translateZ(-100px) rotateY(0deg); 
+}
+
+#dice-two.show-back   { 
+	transform: translateZ(-100px) rotateX(-180deg); 
+}
+
+#dice-two.show-right  {
+	transform: translateZ(-100px) rotateY(-90deg); 
+}
+
+#dice-two.show-left   { 
+	transform: translateZ(-100px) rotateY(90deg); 
+}
+
+#dice-two.show-top    { 
+	transform: translateZ(-100px) rotateX(-90deg); 
+}
+
+#dice-two.show-bottom { 
+	transform: translateZ(-100px) rotateX(90deg); 
+}
+
+
+#dice-two.show-same 	{ 
+	transform: translateZ(-100px) rotateX(360deg); 
+}
+
+
+
+#dice-three.show-front  { 
+	transform: translateZ(-100px) rotateY(0deg); 
+}
+
+#dice-three.show-back   { 
+	transform: translateZ(-100px) rotateX(-180deg); 
+}
+
+#dice-three.show-right  {
+	transform: translateZ(-100px) rotateY(-90deg); 
+}
+
+#dice-three.show-left   { 
+	transform: translateZ(-100px) rotateY(90deg); 
+}
+
+#dice-three.show-top    { 
+	transform: translateZ(-100px) rotateX(-90deg); 
+}
+
+#dice-three.show-bottom { 
+	transform: translateZ(-100px) rotateX(90deg); 
+}
+
+
+#dice-three.show-same 	{ 
+	transform: translateZ(-100px) rotateX(360deg); 
+}*/
+
+
+/*@keyframes fly {
+	10% {
+		transform: translate(-10px, 10px);
+	}
+	40% {
+		transform: translate(-15px, 15px);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(100vw, -100vh);
+		opacity: 0;
+	}
+}
+*/
