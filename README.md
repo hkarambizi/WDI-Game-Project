@@ -19,7 +19,8 @@ Each player gets a turn to roll three dice simultaneuosly. The goal is to roll t
 3. A Winning/Losing roll - No matter what roll the other player has, if a player rolls a "1, 2, 3", it is an automatic loss and if a player rolls a "4, 5, 6" it is an automatic win. 
 At the end of each round, the winner is given a coin from the loser. The human player then has the option to keep playing or "cash out" which will exit the game. 
 
-Live site: #####
+Live site: www.ceelo64.bitballoon.com
+Trello: https://trello.com/b/57AtG8IK/wdi-project-game-1
 
 Technologies Used
 
