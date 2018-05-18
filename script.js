@@ -31,7 +31,9 @@ $(document).ready(function() {
 	$('#myModal').modal('show');
 	soundEffectLaugh();
 
-			
+// To-Do: Parse out the logic into UI, Game, Player, Round, Roll, Dice, Score	
+
+// This should take in a dice object, make three instances, randomly assign their initial values
 const Player = {
 	name: 0,
 	dice1Val: 0,
@@ -43,11 +45,15 @@ const Player = {
 	coins: 3,
 	playTurn: false,
 	throw: 0,
-	rollDice: function(){
+	rollDice: function(){  
 		console.log('roll Dice function activated')
+		
+		// To-Do: create a roll array with initial random values, assign x,y,z each to the below math function
 
 		Player.dice1Val = Math.floor(Math.random() * 6) + 1;
 
+
+		//TO-DO: make this a switch statement taking in x, y, z
 		if (Player.dice1Val == 1) { $('#dice-one').attr('class', 'side-1')}
 			else if (Player.dice1Val == 2) { $('#dice-one').attr('class', 'side-2')}
 			else if (Player.dice1Val == 3) { $('#dice-one').attr('class', 'side-3')}
@@ -75,13 +81,35 @@ const Player = {
 		},
 	calcRollScore: function() {
 			var rollsArray = [Player.dice1Val, Player.dice2Val, Player.dice3Val];
-			var orderedRollsArray = rollsArray.sort;
-alert("calcRollScore; rollsArray is:  " + rollsArray)
-alert("calcRollScore; orderedRollsArray is:  " + orderedRollsArray)
-alert("calcRollScore; orderedRollsArray[1] is:  " + orderedRollsArray[1])
+			var orderedRollsArray = rollsArray.sort();
+			console.log("calcRollScore; rollsArray is:  " + rollsArray);
+			console.log("calcRollScore; orderedRollsArray is:  " + orderedRollsArray);
+			console.log("calcRollScore; orderedRollsArray[1] is:  " + orderedRollsArray[1]);
+			// Sort the array
+
+				// Map over the sorted array to create a new array with the unique value(s)
+
+				// Assign the new arrays length to a variable
+					
+					// If the new array has zero length to see if it was a triple score, if so, assign triple value to score - end roll, next player
+
+					// If the new array has a length of 1, assign the only value to the players score - end roll, next player
+
+					// If the new array has a length of 3, 
+			
+						// Check if the new array matches winCombo of [4,5,6] - end round, player wins
+			
+						// Check if the new array matches loseCombo of [1,2,3] - end round, player loses
+
+						// Otherwise, assign null to the player's score
+
+
+
+			// CODE TO REFACTOR
 			for(var i = 0; i < orderedRollsArray.length; i++) {
+				// In the sorted array, check if the 1st and 2nd value
 				if (orderedRollsArray[0] === orderedRollsArray[1] && orderedRollsArray[1] === orderedRollsArray[2]) {
-					return orderedRollsArray[0]+6;
+					return orderedRollsArray[0] + 6;
 				} else if (orderedRollsArray[0] === orderedRollsArray[1] && orderedRollsArray[1] !== orderedRollsArray[2]) {
 					return orderedRollsArray[2];
 				} else if (orderedRollsArray[0] === orderedRollsArray[2] && orderedRollsArray[2] !== orderedRollsArray[1]) {
@@ -118,18 +146,22 @@ alert("calcRollScore; orderedRollsArray[1] is:  " + orderedRollsArray[1])
 //THIS IS THE JQUERY FOR THE "ROLL DICE" BUTTON
 
 
-$('#roll-dice').click(function(){
-	alert(Player.calcRollScore());
-	Player.rollDice();
-	Player.calcRollScore();
-	soundEffectDiceRoll();
-	Player.updateScore();
+	$('#roll-dice').click(function(){
+		Player.calcRollScore();
+		Player.rollDice();
+		Player.calcRollScore();
+		soundEffectDiceRoll();
+		Player.updateScore();
 
+		});
+
+
+
+	$('#about').click(function(){
+		$('myModal').modal('show');
 	});
 
 
 
-$('#about').click(function(){
-	$('myModal').modal('show');
 });
-});
+
